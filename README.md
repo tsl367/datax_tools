@@ -3,12 +3,13 @@
 该工具可以自动获取源表和目标表的属性及分区信息，自动生成源表所有分区的json文件，并生成批量串行脚本和批量检测脚本。方便大家的数据迁移。
 
 ##2 操作过程
-1. 在config.ini中配置好源ODPS和目标ODPS相关的accessID、accessKEY、project、ODPS server等相关信息；
-2. 在config.ini中配置好datax.py与odmscmd的路径；
-3. 在tables.ini中配置好需要迁移的表名；
-4. 运行python datax_tools.py，生成运行脚本;
-5. 运行run_datax.sh，批量顺序执行迁移任务；
-6. 运行check_datax.sh，进行源表和目标表的条数校验；
+1. `mkdir ./json ./log ./temp`
+2. 在config.ini中配置好源ODPS和目标ODPS相关的accessID、accessKEY、project、ODPS server等相关信息；
+3. 在config.ini中配置好datax.py与odmscmd的路径；
+4. 在tables.ini中配置好需要迁移的表名；
+5. 运行python datax_tools.py，生成运行脚本;
+6. 运行run_datax.sh，批量顺序执行迁移任务；
+7. 运行check_datax.sh，进行源表和目标表的条数校验；
 
 ##3 详细说明
 ###3.1 工具配置
@@ -27,7 +28,7 @@
 * writer_accoutType: 一般默认为aliyun；
 
 ####3.1.3 工具的相关配置
-本批量工具的相关配置，需要主要datax.py和odpscmd的路径，其余一般不用修改。
+本批量工具的相关配置，需要注意datax.py和odpscmd的路径，其余一般不用修改。
 
 ###3.2 源表和目标表添加
 在配置文件tables.ini中。
