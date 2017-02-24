@@ -20,9 +20,9 @@
 
 * datax_speed: 控制datax实际运行时的速度上限；
 * reader_project_auth: datax的验证机制，可为空。如果验证失败，可以输入一个源ODPS ID具备owner权限的项目名；
-* reader_odps_server: 源ODPS的api url，可从cmdb查询，找PE获取；
-* writer_odps_server: 目标ODPS的api url，可从cmdn查询，找PE获取；
-* writer_odps_tunnel: 目标ODPS的tunnel，可从cmdb查询，或找PE获取；
+* reader_odps_server: 源ODPS的api url，可从cmdb查询，或找云管理员获取；
+* writer_odps_server: 目标ODPS的api url，可从cmdb查询，或找云管理员获取；
+* writer_odps_tunnel: 目标ODPS的tunnel，可从cmdb查询，或找云管理员获取；
 * writer_truncate: 覆盖式导入开关；
 * writer_accoutType: 一般默认为aliyun；
 
